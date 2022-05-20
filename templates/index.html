@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome To Text Analyazer</h1>
+    <!-- <h2>Hello {{name}}</h2> -->
+
+    <form action="/analyze" method="POST">
+        {% csrf_token %}
+        <textarea name="texts" id="" cols="30" rows="10" style="width: 1439px; height: 141px;"></textarea><br>
+        <input type="checkbox" name="removepunc">Remove Punc <br>
+        <input type="checkbox" name="fullcaps">Uppercase <br>
+        <input type="checkbox" name="newlineremover">New Line Remover <br>
+        <input type="checkbox" name="extraspaceremover">Extra Space Remover <br>
+        <button type="submit">Analyaze Text</button>
+    </form>
+</body>
+</html>
